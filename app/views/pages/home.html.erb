@@ -1,6 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Login",  new_user_session_path %>
 
-<%= link_to "Log out", destroy_user_session_path,
-  class: "dropdown-item" %>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <p>Vender</p>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to "Comprar", feelings_path %>
+      </div>
+    </div>
+  </div>
+ </div>
+<%# <%= link_to "Login",  new_user_session_path %>
