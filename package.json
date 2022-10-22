@@ -5,15 +5,27 @@
     "@hotwired/stimulus": "^3.1.0",
     "@hotwired/turbo-rails": "^7.2.4",
     "@popperjs/core": "^2.11.6",
+<<<<<<< HEAD
     "@rails/webpacker": "5.4.3",
     "bootstrap": "^5.2.2",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
+=======
+    "@rails/webpacker": "^6.0.0-rc.6",
+    "bootstrap": "^5.2.2",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
+>>>>>>> 995e08f2e0e60c9f7950b4fc3112aed9c801608d
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "webpack-dev-server": "^3"
+=======
+    "@webpack-cli/serve": "^1.7.0",
+    "webpack-dev-server": "^4.11.1"
+>>>>>>> 995e08f2e0e60c9f7950b4fc3112aed9c801608d
   }
 }

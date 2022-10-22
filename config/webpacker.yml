@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Note: You must restart bin/webpack-dev-server for changes to take effect
 
 default: &default
@@ -9,12 +10,26 @@ default: &default
   webpack_compile_output: true
 
   # Additional paths webpack should lookup modules
+=======
+# Note: You must restart bin/webpacker-dev-server for changes to take effect
+
+default: &default
+  source_path: app/javascript
+  source_entry_path: /
+  public_root_path: public
+  public_output_path: packs
+  cache_path: tmp/webpacker
+  webpack_compile_output: true
+
+  # Additional paths webpack should look up modules
+>>>>>>> 995e08f2e0e60c9f7950b4fc3112aed9c801608d
   # ['app/assets', 'engine/foo/app/assets']
   additional_paths: []
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false
 
+<<<<<<< HEAD
   # Extract and emit a css file
   extract_css: false
 
@@ -47,6 +62,8 @@ default: &default
     - .jpeg
     - .jpg
 
+=======
+>>>>>>> 995e08f2e0e60c9f7950b4fc3112aed9c801608d
 development:
   <<: *default
   compile: true
@@ -56,6 +73,7 @@ development:
     https: false
     host: localhost
     port: 3035
+<<<<<<< HEAD
     public: localhost:3035
     hmr: false
     # Inline should be set to true if using HMR
@@ -71,6 +89,30 @@ development:
     watch_options:
       ignored: '**/node_modules/**'
 
+=======
+    # Hot Module Replacement updates modules while the application is running without a full reload
+    hmr: false
+    # Defaults to the inverse of hmr. Uncomment to manually set this.
+    # live_reload: true
+    client:
+      # Should we show a full-screen overlay in the browser when there are compiler errors or warnings?
+      overlay: true
+      # May also be a string
+      # webSocketURL:
+      #  hostname: "0.0.0.0"
+      #  pathname: "/ws"
+      #  port: 8080
+    # Should we use gzip compression?
+    compress: true
+    # Note that apps that do not check the host are vulnerable to DNS rebinding attacks
+    allowed_hosts: "all"
+    pretty: true
+    headers:
+      'Access-Control-Allow-Origin': '*'
+    static:
+      watch:
+        ignored: '**/node_modules/**'
+>>>>>>> 995e08f2e0e60c9f7950b4fc3112aed9c801608d
 
 test:
   <<: *default
@@ -85,8 +127,11 @@ production:
   # Production depends on precompilation of packs prior to booting for performance.
   compile: false
 
+<<<<<<< HEAD
   # Extract and emit a css file
   extract_css: true
 
+=======
+>>>>>>> 995e08f2e0e60c9f7950b4fc3112aed9c801608d
   # Cache manifest.json for performance
   cache_manifest: true
