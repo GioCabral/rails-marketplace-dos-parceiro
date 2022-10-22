@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="row">
+    <% @feelings.each do |feeling| %>
+      <div class="col-12 mt-3">
+        <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-cont">
+          <div class="card-product-infos">
+            <div class="card_info">
+              <h2><%= feeling.name %></h2>
+              <p>Price: <strong><%= feeling.price %></strong></p>
+            </div>
+              <div class="card_btn">
+              <p><%= link_to "Detalhes", feeling_path(feeling) %></p>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
