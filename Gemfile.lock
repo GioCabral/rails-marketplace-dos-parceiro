@@ -6,16 +6,6 @@ GIT
       actionpack (>= 5.2)
       activemodel (>= 5.2)
 
-GIT
-  remote: https://github.com/rails/webpacker.git
-  revision: dc1482790326ca077577dc957b0be068724b9c7c
-  specs:
-    webpacker (6.0.0.rc.6)
-      activesupport (>= 5.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 5.2)
-      semantic_range (>= 2.3.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -248,7 +238,7 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
-    webpacker (5.4.3)
+    webpacker (6.0.0.rc.6)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
       railties (>= 5.2)
@@ -287,11 +277,7 @@ DEPENDENCIES
   tzinfo-data
   web-console
   webdrivers
-<<<<<<< HEAD
   webpacker
-=======
-  webpacker!
->>>>>>> 995e08f2e0e60c9f7950b4fc3112aed9c801608d
 
 RUBY VERSION
    ruby 3.1.2p20
