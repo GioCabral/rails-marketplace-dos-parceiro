@@ -29,7 +29,7 @@ gem "jbuilder"
 
 gem "devise"
 
-gem 'webpacker'
+# gem 'webpacker'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -61,6 +61,8 @@ group :development, :test do
   gem "dotenv-rails"
 
 end
+
+gem 'webpacker', github: 'rails/webpacker'
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
