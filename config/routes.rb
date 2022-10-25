@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :feelings do
     resources :orders, only: %i[ new create]
   end
-  resources :orders, onnly: %i[index]
+  resources :orders, only: %i[index]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
