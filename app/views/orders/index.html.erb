@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Meus pedidos</h1>
+  <div class="row">
+    <% @orders.each do |order| %>
+      <div class="col-4 mt-3">
+        <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-cont">
+          <div class="card-product-infos">
+            <div class="card_info">
+              <h2><%= order.feeling.name %></h2>
+              <p>Price: <strong><%= order.total_price %></strong></p>
+              <p>Comprado de: <strong><%= order.user.email %></strong></p>
+            </div>
+              <div class="card_btn">
+
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="btn-back">
+    <%= link_to "Buscar novos", feelings_path, class: "btn btn-primary" %>
+  </div>
+</div>

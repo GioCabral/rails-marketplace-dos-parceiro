@@ -1,0 +1,16 @@
+<div class="containew mt-3">
+  <H1>Detalhe do produto</H1>
+  <div class="prod_all">
+    <div class="prod">
+      <div class="prod_info">
+        <h2><%= @feeling.name %></h2>
+      </div>
+      <div class="prod_footer">
+        <p>Vendido por: <b><%= @feeling.user.email %></b></p>
+      </div>
+    </div>
+    <div class="btn">
+      <%= link_to "Comprar", new_feeling_order_path(@feeling), class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>

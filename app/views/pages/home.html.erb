@@ -1,3 +1,26 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Login",  new_user_session_path %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to " Vender",  new_feeling_path %>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to "Comprar", feelings_path %>
+      </div>
+    </div>
+    <div class="col-6 mt-3">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to "Meus pedidos", orders_path %>
+      </div>
+    </div>
+    <div class="col-6 mt-3">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <p><%= link_to "Minhas Vandas", orders_path %></p>
+      </div>
+    </div>
+  </div>
+ </div>
+<%# <%= link_to "Login",  new_user_session_path %>

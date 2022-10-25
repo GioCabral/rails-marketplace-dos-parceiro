@@ -1,0 +1,6 @@
+<%= simple_form_for [@feeling, @order] do |f| %>
+  <%= f.input :feeling_id, disabled: true %>
+  <%= f.input :user_id, disabled: true%>
+  <%= f.input :total_price, disabled: true%>
+  <%= f.button :submit %>
+<% end %>
