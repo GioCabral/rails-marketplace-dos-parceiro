@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_26_002209) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_26_004139) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "feelings", force: :cascade do |t|
     t.string "name"
-    t.float "percentage"
+    t.integer "percentage"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -26,6 +26,6 @@ class FeelingsController < ApplicationController
   private
 
   def set_params
-    params.require(:feeling).permit(:name, :price)
+    params.require(:feeling).permit(:name, :percentage)
   end
 end
