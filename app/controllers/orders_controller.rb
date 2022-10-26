@@ -5,21 +5,21 @@ def index
 
   def new
     @feeling = Feeling.find(params[:feeling_id])
-    @order = Order.new(total_price: @feeling.price)
+    @order = Order.new(total_price: @feeling.percentage)
     @order.feeling_id = params[:feeling_id]
     @order.user_id = current_user.id
   end
 
   def create
     @feeling = Feeling.find(params[:feeling_id])
-    @order = Order.new(total_price: @feeling.price)
+    @order = Order.new(total_price: @feeling.percentage)
     @order.feeling_id = params[:feeling_id]
     @order.user_id = current_user.id
 
     if @order.save
       redirect_to orders_path
     else
-      render :new, unprocessable_entity: :true
+      render :new, unprocessable_entity: true
     end
   end
 end
