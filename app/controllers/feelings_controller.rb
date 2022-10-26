@@ -2,6 +2,7 @@ class FeelingsController < ApplicationController
 
   def index
     @feelings = Feeling.all
+    @feelings = @feelings.reject { |feeling| feeling.user_id == current_user.id }
   end
 
   def show
