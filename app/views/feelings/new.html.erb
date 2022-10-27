@@ -1,5 +1,6 @@
 <%= simple_form_for [@feeling] do |f| %>
   <%= f.input :name%>
   <%= f.input :percentage, as: :numeric%>
+  <%= f.input :photo, as: :file %>
   <%= f.button :submit %>
 <% end %>
