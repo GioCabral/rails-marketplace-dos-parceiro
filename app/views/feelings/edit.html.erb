@@ -2,5 +2,6 @@
   <%= f.input :name%>
   <%= f.input :percentage, as: :integer, input_html: { maxlength: 3 } %>
   <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-light" %>
 <% end %>
+<%= link_to "Return", root_path, class: "btn btn-light" %>
