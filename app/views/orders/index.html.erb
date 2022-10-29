@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Meus pedidos</h1>
+  <h1>My Requests</h1>
   <div class="row">
     <% @orders.each do |order| %>
       <div class="col-4 mt-3">
@@ -12,7 +12,7 @@
             <div class="card_info">
               <h2><%= order.feeling.name %></h2>
               <p>Price: <strong><%= order.total_price %></strong></p>
-              <p>Comprado de: <strong><%= order.user.email %></strong></p>
+              <p>Acquired from: <strong><%= order.user.email %></strong></p>
             </div>
               <div class="card_btn">
 

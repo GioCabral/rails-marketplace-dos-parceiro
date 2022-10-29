@@ -1,5 +1,6 @@
 <div class="container">
-  <h1>Meus anúncios</h1>
+  <h1>My Feelings</h1>
+
 <div class="container">
   <div class="row">
     <% @feelings.each do |feeling| %>
@@ -18,7 +19,7 @@
               <% end %>
             </div>
               <div class="card_btn">
-              <p><%= link_to "Detalhes", feeling_path(feeling) %></p>
+              <p><%= link_to "Details", feeling_path(feeling) %></p>
               </div>
           </div>
           </div>

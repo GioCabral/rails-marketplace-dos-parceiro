@@ -1,17 +1,22 @@
-<div class="containew mt-3">
-  <H1>Detalhe do produto</H1>
-  <div class="prod_all">
+<div class="container mt-3">
+  <h1>Product Details</h1>
+  <div class="prod_all p-2">
     <div class="prod">
       <div class="prod_info">
         <h2><%= @feeling.name %></h2>
         <p><strong><%= @feeling.percentage %>%</strong></p>
       </div>
       <div class="prod_footer">
-        <p>Vendido por: <b><%= @feeling.user.email %></b></p>
+        <p>Owner: <b><%= @feeling.user.email %></b></p>
       </div>
     </div>
     <div class="btn">
-      <%= link_to "Comprar", new_feeling_order_path(@feeling), class:"btn btn-primary" %>
+    <% if @feeling.user != current_user %>
+      <%= link_to "Buy", new_feeling_order_path(@feeling), class:"btn btn-primary mb-3" %>
+    <% else %>
+      <%= link_to "Edit", edit_feeling_path(@feeling), class:"btn btn-primary mb-3" %>
+    <% end %>
+    <%= link_to "Return", root_path, class: "btn btn-light" %>
     </div>
   </div>
 </div>
