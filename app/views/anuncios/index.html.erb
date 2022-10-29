@@ -1,10 +1,9 @@
 <div class="container">
   <h1>Meus anúncios</h1>
-
 <div class="container">
   <div class="row">
     <% @feelings.each do |feeling| %>
-      <div class="col-4 mt-3">
+      <div class="col-4 ">
         <div class="card-product">
         <% if feeling.photo.key %>
           <%= cl_image_tag feeling.photo.key, height: 300, width: 400, crop: :fill %>
@@ -26,5 +25,11 @@
         </div>
       </div>
     <% end %>
+
+  </div>
+
+</div>
+<div class="btn_back">
+    <%= link_to "Add more feelings", feelings_path, class: "btn btn-primary" %>
   </div>
 </div>

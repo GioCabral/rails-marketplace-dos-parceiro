@@ -1,6 +1,8 @@
-<%= simple_form_for [@feeling] do |f| %>
-  <%= f.input :name%>
-  <%= f.input :percentage, as: :integer, input_html: { maxlength: 3 } %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <%= simple_form_for [@feeling] do |f| %>
+    <%= f.input :name%>
+    <%= f.input :percentage, as: :integer, input_html: { maxlength: 3 } %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

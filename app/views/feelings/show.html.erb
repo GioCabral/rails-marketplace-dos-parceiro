@@ -11,11 +11,7 @@
       </div>
     </div>
     <div class="btn">
-    <% if @feeling.user != current_user %>
       <%= link_to "Comprar", new_feeling_order_path(@feeling), class:"btn btn-primary" %>
-    <% else %>
-      <%= link_to "Editar", edit_feeling_path(@feeling), class:"btn btn-primary" %>
-    <% end %>
     </div>
   </div>
 </div>
