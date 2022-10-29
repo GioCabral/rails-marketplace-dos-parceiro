@@ -16,6 +16,19 @@ class FeelingsController < ApplicationController
     @feeling = Feeling.new
   end
 
+  def edit
+    @feeling = Feeling.find(params[:id])
+  end
+
+  def update
+    @feeling = Feeling.find(params[:id])
+    if @feeling.update(set_params)
+      redirect_to feeling_path(params[:id]), notice: "SHOW DE BOLA!"
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def create
     @feeling = Feeling.new(set_params)
     @feeling.user_id = current_user.id
