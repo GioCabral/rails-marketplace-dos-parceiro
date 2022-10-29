@@ -4,7 +4,9 @@
     <% @orders.each do |order| %>
       <div class="col-4 mt-3">
         <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <% if order.feeling.photo.key %>
+          <%= cl_image_tag order.feeling.photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
         <div class="card-cont">
           <div class="card-product-infos">
             <div class="card_info">
@@ -21,7 +23,7 @@
       </div>
     <% end %>
   </div>
-  <div class="btn-back">
-    <%= link_to "Buscar novos", feelings_path, class: "btn btn-primary" %>
+  <div class="btn_back">
+    <%= link_to "Add more feelings", feelings_path, class: "btn btn-primary" %>
   </div>
 </div>
