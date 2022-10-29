@@ -1,6 +1,15 @@
-<%= simple_form_for [@feeling, @order] do |f| %>
-  <%= f.input :feeling_id, disabled: true %>
-  <%= f.input :user_id, disabled: true%>
-  <%= f.input :total_price, disabled: true%>
-  <%= f.button :submit %>
-<% end %>
+<div class="container-fluid">
+  <div class="card" style="width: 25rem;">
+    <% if @feeling.photo.key %>
+      <%= cl_image_tag @feeling.photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %>
+    <div class="card-body">
+      <h5 class="card-title"><%= @feeling.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @order.total_price.to_i%>%</h6>
+      <%= simple_form_for [@feeling, @order] do |f| %>
+        <%= f.button :submit, 'Acquire Feeling', class: "btn btn-primary" %>
+      <% end %>
+      <%= link_to "Return", feelings_path %>
+    </div>
+  </div>
+</div>
