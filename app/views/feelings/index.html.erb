@@ -12,6 +12,9 @@
             <div class="card_info">
               <h2><%= feeling.name %></h2>
               <p><strong><%= feeling.percentage %>%</strong></p>
+              <% if feeling.user == current_user %>
+              <span class="badge rounded-pill text-bg-info">My feelings</span>
+              <% end %>
             </div>
               <div class="card_btn">
               <p><%= link_to "Detalhes", feeling_path(feeling) %></p>
