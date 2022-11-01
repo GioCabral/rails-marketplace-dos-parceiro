@@ -1,9 +1,17 @@
 class FeelingsController < ApplicationController
 
   def index
-    @feelings = Feeling.all
+
+    if params[:query].present?
+      sql_query = <<~SQL
+        feelings.name @@ :query
+      SQL
+      @feelings = Feeling.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @feelings = Feeling.all
+    end
+
     @feelings = @feelings.reject do |feeling|
-      # feeling.user_id == current_user.id ||
       feeling.order
     end
   end
