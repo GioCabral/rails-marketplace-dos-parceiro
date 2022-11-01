@@ -1,7 +1,5 @@
 class FeelingsController < ApplicationController
-
   def index
-
     if params[:query].present?
       sql_query = <<~SQL
         feelings.name @@ :query
@@ -10,7 +8,6 @@ class FeelingsController < ApplicationController
     else
       @feelings = Feeling.all
     end
-
     @feelings = @feelings.reject do |feeling|
       feeling.order
     end
