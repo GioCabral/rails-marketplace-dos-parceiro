@@ -9,15 +9,16 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div>
+    <div class="search-engine">
       <%= form_with url: feelings_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
           nil,
           class: "form-control",
           placeholder: "Find a Feeling"
         %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-
+        <%= button_tag type: 'submit', class: "search-icon" do %>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        <% end %>
       <% end %>
     </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
