@@ -1,7 +1,11 @@
 class FeelingsController < ApplicationController
   def index
     if params[:query].present?
-      @feelings = Feeling.where("name ILIKE ?", "%#{params[:query]}%")
+      sql_query = <<~SQL
+        feelings.name ILIKE :query
+        OR feelings.description ILIKE :query
+      SQL
+      @feelings = Feeling.where(sql_query, query: "%#{params[:query]}%")
     else
       @feelings = Feeling.all
     end
