@@ -1,0 +1,20 @@
+.form-control {
+  border-radius: 20px;
+
+  &:focus{
+    color: #0E0000;
+    background-color: #F4F4F4;
+    border-color: #dee2e6;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem #dee2e6;
+  }
+}
+
+.search-icon {
+  border: 0;
+  background-color: transparent;
+}
+
+.fa-magnifying-glass{
+  color: grey;
+}

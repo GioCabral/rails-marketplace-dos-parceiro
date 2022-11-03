@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>My Requests</h1>
+  <div class="row">
+    <% @orders.each do |order| %>
+      <div class="col-4 mt-3">
+        <div class="card-product">
+          <% if order.feeling.photo.key %>
+          <%= cl_image_tag order.feeling.photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
+        <div class="card-cont">
+          <div class="card-product-infos">
+            <div class="card_info">
+              <h2><%= order.feeling.name %></h2>
+              <p>Price: <strong><%= order.total_price %></strong></p>
+              <p>Acquired from: <strong><%= order.user.email %></strong></p>
+            </div>
+              <div class="card_btn">
+
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="btn_back">
+    <%= link_to "Add more feelings", feelings_path, class: "btn btn-primary" %>
+  </div>
+</div>
