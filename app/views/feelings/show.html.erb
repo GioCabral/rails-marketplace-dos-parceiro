@@ -1,23 +1,23 @@
 <div class="container mt-3">
-  <h1>Product Details</h1>
-  <div class="prod_all p-2">
-    <div class="prod">
-      <div class="prod_info">
-        <h2><%= @feeling.name %></h2>
-        <p><strong><%= @feeling.percentage %>%</strong></p>
-        <p><%= @feeling.description %></p>
-      </div>
-      <div class="prod_footer">
-        <p>Owner: <b><%= @feeling.user.email %></b></p>
-      </div>
+  <div class="row">
+    <div class="col-8">
+      <%= cl_image_tag @feeling.photo.key, width:600, height:600, class:'card_img' %>
     </div>
-    <div class="btn">
-    <% if @feeling.user != current_user %>
-      <%= link_to "Buy", new_feeling_order_path(@feeling), class:"btn btn-primary mb-3" %>
-    <% else %>
-      <%= link_to "Edit", edit_feeling_path(@feeling), class:"btn btn-primary mb-3" %>
-    <% end %>
-    <%= link_to "Return", root_path, class: "btn btn-light" %>
+    <div class="col-4">
+      <div class="info_card align-items-start">
+        <h2><%= @feeling.name %></h2>
+        <p class="description">Description: <%= @feeling.description %></p>
+        <p>Percentage: <%= @feeling.percentage %>%</p>
+        <div class="btns">
+            <% if @feeling.user != current_user %>
+          <%= link_to "Buy", new_feeling_order_path(@feeling), class:"btn btn-primary" %>
+            <% else %>
+          <%= link_to "Edit", edit_feeling_path(@feeling), class:"btn btn-primary" %>
+          <% end %>
+            <%= link_to "Return", root_path, class: "btn btn-primary" %>
+      </div>
+      </div>
+
     </div>
   </div>
 </div>
