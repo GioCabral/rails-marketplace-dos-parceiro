@@ -5,9 +5,10 @@
     <% end %>
     <div class="card-body">
       <h5 class="card-title"><%= @feeling.name %></h5>
-      <h6 class="card-subtitle mb-2 text-muted"><%= @order.total_price.to_i%>%</h6>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @feeling.percentage.to_i%>%</h6>
       <%= simple_form_for [@feeling, @order] do |f| %>
-        <%= f.button :submit, 'Acquire Feeling', class: "btn btn-primary" %>
+      <%= f.input :total_price, collection: 1..@feeling.percentage.to_i %>
+      <%= f.button :submit, 'Acquire Feeling', class: "btn btn-primary" %>
       <% end %>
       <%= link_to "Return", feelings_path %>
     </div>

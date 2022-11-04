@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import FeelingImageController from "./feeling_image_controller"
+application.register("feeling-image", FeelingImageController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
