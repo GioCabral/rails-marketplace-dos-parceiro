@@ -1,4 +1,5 @@
 class FeelingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
   def index
     if params[:query].present?
       sql_query = <<~SQL
@@ -10,7 +11,7 @@ class FeelingsController < ApplicationController
       @feelings = Feeling.all
     end
     @feelings = @feelings.reject do |feeling|
-      feeling.order
+      feeling.percentage <= 0
     end
   end
 
@@ -48,6 +49,6 @@ class FeelingsController < ApplicationController
   private
 
   def set_params
-    params.require(:feeling).permit(:name, :percentage, :photo)
+    params.require(:feeling).permit(:name, :percentage, :photo, :description)
   end
 end

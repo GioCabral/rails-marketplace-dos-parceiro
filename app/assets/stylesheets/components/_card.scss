@@ -99,7 +99,6 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -113,4 +112,28 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card_main{
+  display: flex;
+  height: 100%;
+}
+
+.card_img{
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.info_card{
+  padding: 35px;
+  margin-left: 15px;
+  box-shadow: 0 0 10px #e5e5e5;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  word-break: break-all;
+  height: min-content;
+}
+
+.description{
+  color: rgb(149, 149, 149);
 }
