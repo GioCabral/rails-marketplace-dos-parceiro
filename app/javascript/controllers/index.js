@@ -9,3 +9,6 @@ application.register("feeling-image", FeelingImageController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import UserImageController from "./user_image_controller"
+application.register("user-image", UserImageController)

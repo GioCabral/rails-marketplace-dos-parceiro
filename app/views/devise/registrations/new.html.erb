@@ -4,7 +4,7 @@
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
     <%= f.error_notification %>
 
-    <div class="form-inputs">
+    <div class="form-inputs" data-controller="user-image">
 
       <%= f.input :email,
                   required: true,
@@ -17,6 +17,7 @@
       <%= f.input :password_confirmation,
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
+      <div class="nels"></div>
       <%= f.input :photo, as: :file %>
 
     </div>
