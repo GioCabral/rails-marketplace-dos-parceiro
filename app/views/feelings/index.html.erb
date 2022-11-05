@@ -6,7 +6,7 @@
       <div class="col-4 mt-3">
         <div class="card-product">
           <% if feeling.photo.key %>
-            <%= cl_image_tag feeling.photo.key, height: 300, width: 400, crop: :fill %>
+            <%= cl_image_tag feeling.photo.key %>
           <% end %>
           <div class="card-cont">
             <div class="card-product-infos">
