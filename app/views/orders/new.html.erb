@@ -1,5 +1,5 @@
-<div class="container-fluid">
-  <div class="card" style="width: 25rem;">
+<div class="container_register mt-3">
+  <div class="card" style="width: 25rem; height: min-content;">
     <% if @feeling.photo.key %>
       <%= cl_image_tag @feeling.photo.key, height: 300, width: 400, crop: :fill %>
     <% end %>
@@ -8,9 +8,9 @@
       <h6 class="card-subtitle mb-2 text-muted"><%= @feeling.percentage.to_i%>%</h6>
       <%= simple_form_for [@feeling, @order] do |f| %>
       <%= f.input :total_price, collection: 1..@feeling.percentage.to_i %>
-      <%= f.button :submit, 'Acquire Feeling', class: "btn btn-primary" %>
+      <%= f.button :submit, 'Acquire Feeling', class: "btn btn-primary", id:"all_width" %>
       <% end %>
-      <%= link_to "Return", feelings_path %>
+      <%= link_to "Return", feelings_path, id:"text_deco" %>
     </div>
   </div>
 </div>

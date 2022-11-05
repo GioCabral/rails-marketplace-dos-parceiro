@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import EditFeelingPhotoController from "./edit_feeling_photo_controller"
+application.register("edit-feeling-photo", EditFeelingPhotoController)
+
 import FeelingImageController from "./feeling_image_controller"
 application.register("feeling-image", FeelingImageController)
 

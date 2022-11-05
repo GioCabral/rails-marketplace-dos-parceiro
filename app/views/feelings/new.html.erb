@@ -1,13 +1,20 @@
-<div class="container">
-  <div class="form_add" data-controller="feeling-image" >
-   <%= simple_form_for [@feeling] do |f| %>
-      <%= f.input :name, label_html: { class: 'new_form' }%>
-      <%= f.input :description%>
-      <%= f.input :percentage, as: :integer, input_html: { maxlength: 3 } %>
-      <div class="nels"></div>
-      <%= f.input :photo, as: :file, label_html: { class: 'images' }  %>
-      <%= f.button :submit %>
-    <% end %>
-    <%= link_to "Return", root_path, class: "btn btn-light" %>
+<div class="container_register">
+  <div class="register justify-content-center">
+    <div class="register_content">
+     <div class="register_title">
+        <h3>Register Feeling</h3>
+      </div>
+      <div class="form_add" data-controller="feeling-image" >
+      <%= simple_form_for [@feeling] do |f| %>
+          <%= f.input :name, label_html: { class: 'new_form' }%>
+          <%= f.input :description%>
+          <%= f.input :percentage, as: :integer, input_html: { maxlength: 3 } %>
+          <div class="nels"></div>
+          <%= f.input :photo, as: :file, label_html: { class: 'images' }  %>
+          <%= f.button :submit, class:"btn btn-primary", id:"all_width" %>
+        <% end %>
+        <%= link_to "Return", root_path, class: "btn btn-light" %>
+      </div>
+    </div>
   </div>
 </div>
