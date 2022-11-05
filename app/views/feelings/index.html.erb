@@ -3,7 +3,7 @@
   <div class="row">
 
     <% @feelings.each do |feeling| %>
-      <div class="col-4 mt-3">
+      <div class=" col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-3">
         <div class="card-product">
           <% if feeling.photo.key %>
             <%= cl_image_tag feeling.photo.key %>
